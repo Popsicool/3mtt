@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block style %} {% endblock style %}
+</head>
+<body>
+    <header>
+        {% include 'header.html' %}
+    </header>
+    <main>
+        <div class="msg">
+            {% for msg in messages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        </div>
+        {% block main %}
+        {% endblock main %}
+    </main>
+
+    {% include 'footer.html' %}
+    
+</body>
+</html>
