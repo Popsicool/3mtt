@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Edit a product
+{% endblock title %}
+
+
+{% block main %}
+
+<form action="" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<label for="">Name</label><br>
+<input type="text" name="name"  value="{{product.name}}"><br>
+<label for="">Description</label><br>
+<textarea name="description" id="">{{product.description}}</textarea><br>
+<label for="">Price</label><br>
+<input type="number" name="price" value="{{product.price}}"><br>
+<label for="">Quantity</label><br>
+<input type="number" name="quantity" value="{{product.quantity}}"><br>
+<input type="file" name="image" id=""><br>
+<button>Upload</button>
+
+</form>
+
+
+{% endblock main %}
