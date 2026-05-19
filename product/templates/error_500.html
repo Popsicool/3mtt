@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Page not found {% endblock title %}
+{% block main %}
+<div style="display: grid; place-items: center; background-color: grey; padding: 5%;">
+    <h1>SERVER ERROR</h1>
+    <p>It's from our end, we will sack our developer for this!</p>
+    <button><a href="{% url 'home' %}">Go home</a></button>
+
+</div>
+{% endblock main %}

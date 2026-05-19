@@ -18,9 +18,10 @@
         {% if product.user == user %}
         <a href="{% url 'edit-product' product.id %}"><button class="buy-btn">Edit</button></a>
         <a href="{% url 'delete-product' product.id %}"><button class="buy-btn">Delete</button></a>
+        <a href="{% url 'transactions-product' product.id %}"><button class="buy-btn">Transactions</button></a>
         
         {% else %}
-        <button class="buy-btn">Buy</button>
+        <a href="{% url 'buy-product' product.id %}"><button class="buy-btn">Buy</button></a>
         {% endif %}
 
     </div>
